@@ -9,7 +9,7 @@ const getTodosRoutes = require('./routes/todos');
 
 dbConnect();
 
-app.use(cors({ origin: 'http://localhost:3000', credentials: true, exposedHeaders: ['Authorization'] }));
+app.use(cors({ origin: 'https://todos-mernstack-app.vercel.app/', credentials: true, exposedHeaders: ['Authorization'] }));
 app.use(express.json());
 app.use('/api/users/', getUserRoutes);
 app.use('/api/todos/', getTodosRoutes)
