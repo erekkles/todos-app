@@ -5,7 +5,7 @@ export const GlobalContext = React.createContext({});
 const GlobalProvider = ({ children }) => {
     const [filter, setFilter] = useState('all');
     const [search, setSearch] = useState('')
-    const svBaseUrl = 'http://localhost:5000';
+    const svBaseUrl = 'https://todos-mernstack-app.herokuapp.com/';
 
     const saveUsername = (user) =>  window.localStorage.setItem('username', user);
 
