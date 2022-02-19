@@ -1,0 +1,30 @@
+.card_wrapper {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    background-color: #87ceeb;
+    padding: .5em;
+    border-radius: 5px;
+}
+
+.card_wrapper:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+.card_wrapper-information {
+    display: inherit;
+    align-items: center;
+}
+
+.information_checkbox {
+    height: 15px;
+    width: 15px;
+    background-color: #ffffff;
+    border: 1px solid #808080;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.checked {
+    background-color: green;
+}

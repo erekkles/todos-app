@@ -1,0 +1,26 @@
+:root {
+    --full-vh-minus-root-padding: calc(100vh - 1em);
+    /* color variables */
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Arial';
+}
+
+body {
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+#root { 
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+}
+
+.cursor-pointer { cursor: pointer!important }
+
+.mt-auto { margin-top: auto; }

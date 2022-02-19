@@ -1,0 +1,131 @@
+.toggler_input {
+    display: none;
+    opacity: 0;
+}
+
+.toggler_label {
+    opacity: 0;
+    background-color: transparent;
+    position: absolute;
+    left: 1em;
+    top: 1em;
+    z-index: 10;
+}
+
+.toggler_input:checked ~ .main_wrapper {
+    left: 0%;
+}
+
+#main {
+    display: grid;
+    border: 1px solid #d1d1d1;
+    position: relative;
+    border-radius: 5px;
+    min-height: 100%;
+    min-width: 100%;
+    overflow: hidden;
+}
+
+#main::before {
+    content: '...';
+    position: absolute;
+    font-family: cursive;
+    font-weight: 400;
+    top: -5px;
+    left: 1em;
+    font-size: 30px;
+}
+
+.main_wrapper {
+    display: grid;
+    height: calc(var(--full-vh-minus-root-padding) - 1em);
+    position: relative;
+    left: -100%;
+    grid-template-columns: 100% 100%;
+    transition: left .7s ease;
+}
+
+.main_wrapper-aside, .main_wrapper-content {
+    display: flex;
+    flex-direction: column;
+    padding: 3.5em 2em 2em 2em;
+    height: 100%;
+    max-width: 100%;
+}
+
+.main_wrapper-aside {
+    justify-content: space-between;
+}
+
+.main_wrapper-content {
+    overflow-y: scroll;
+}
+
+.aside-formgroup {
+    display: flex;
+    background-color: #e4e4e4;
+    width: 100%;
+    border-radius: 5px;
+    padding: .4em;
+}
+
+.aside-formgroup_label {
+    margin-right: .4em;
+}
+
+.aside-formgroup_input {
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+}
+
+.aside-categories {
+    margin: .6em 0;
+}
+
+.aside-categories_list {
+    list-style: none;
+}
+
+.aside-categories_list-item {
+    text-decoration: none;
+    padding: .4em;
+    border-radius: 5px;
+    transition: background-color .5s ease;
+}
+
+.aside-categories_list-item:hover {
+    background-color: #e4e4e4;
+    transition: background-color .5s ease;
+}
+
+/*  */
+
+.content_title {
+    font-size: 1.7em;
+    margin-bottom: 1em;
+}
+
+.content_todos-wrapper {
+    height: 100%;
+    margin-bottom: 20px;
+    overflow-y: scroll;
+}
+
+@media only screen and (min-width: 992px) {
+    .main_wrapper {
+        height: calc(var(--full-vh-minus-root-padding) - 1em);
+        grid-template-columns: 300px 1fr;
+        grid-template-rows: 100%;
+        left: 0%;
+    }
+
+    .main_wrapper-aside, .main_wrapper-content {
+        max-width: 100%;
+    }
+
+    .toggler_label {
+        display: none;
+    }
+}
