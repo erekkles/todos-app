@@ -7,7 +7,7 @@ const Searchbar = () => {
 
     return (
         <div className='aside-formgroup'>
-            <label htmlFor="search" className='aside-formgroup_label'>Lupa</label>
+            <label htmlFor="search" className='aside-formgroup_label'>🔍</label>
             <input type="text" placeholder='Search' id="search" className='aside-formgroup_input' onChange={(e) => setSearch(e.target.value)}/>
         </div>
     );

@@ -5,7 +5,7 @@ import '../../stylesheets/todo_form.css';
 const CreateTodoForm = () => {
 
     const [title, setTitle] = useState('');
-    const [category, setCategory] = useState('');
+    const [category, setCategory] = useState('household');
     const { createTodo } = useTodos();
 
     const submit = async (e) => {
@@ -36,6 +36,10 @@ const CreateTodoForm = () => {
                             <option value="household">Household</option>
                             <option value="personal">Personal</option>
                             <option value="work">Work</option>
+                            <option value="groceries">Groceries</option>
+                            <option value="movies">Movies to watch</option>
+                            <option value="gaming">Games to play</option>
+                            <option value="restaurants">Places to eat</option>
                         </select>
                     </p>
                     

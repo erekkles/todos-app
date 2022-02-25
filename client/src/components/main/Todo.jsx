@@ -25,7 +25,7 @@ const Todo = ({ todo }) => {
         <li className='card_wrapper'>
             <div className='card_wrapper-information'>
                 <div className={`information_checkbox ${isCompletedStatus ? `checked` : ``}`} onClick={(e) => checkTodo(e)}></div>
-                <p className="information_title">{ title }</p>
+                <p className={`information_title ${isCompletedStatus ? `text_disabled` : ``}`}>{ title }</p>
             </div>
         </li>
     )

@@ -32,6 +32,7 @@
     font-family: cursive;
     font-weight: 400;
     top: -5px;
+    z-index: 10;
     left: 1em;
     font-size: 30px;
 }
@@ -55,10 +56,12 @@
 
 .main_wrapper-aside {
     justify-content: space-between;
+    background-color: #ffffff;
 }
 
 .main_wrapper-content {
     overflow-y: scroll;
+    background-color: #cceefc;
 }
 
 .aside-formgroup {
@@ -91,7 +94,7 @@
 .aside-categories_list-item {
     text-decoration: none;
     padding: .4em;
-    border-radius: 5px;
+    margin-bottom: .4em;
     transition: background-color .5s ease;
 }
 
@@ -100,11 +103,24 @@
     transition: background-color .5s ease;
 }
 
+.selected_category {
+    border-left: solid 4px skyblue;
+    background-color: #ededed;
+}
+
+.wrapper_aside-outButton, .wrapper_content-newButton {
+    border: none;
+    background-color: #ffffff;
+    padding: .9em;
+    border-radius: 5px;
+}
+
 /*  */
 
 .content_title {
     font-size: 1.7em;
     margin-bottom: 1em;
+    color: #2c91bd;
 }
 
 .content_todos-wrapper {
@@ -123,6 +139,7 @@
 
     .main_wrapper-aside, .main_wrapper-content {
         max-width: 100%;
+        padding: 3.5em 1em 2em 1em;
     }
 
     .toggler_label {

@@ -24,9 +24,23 @@ const TodosList = () => {
             .map((todo, index) => <Todo todo={ todo } key={ index }/>)
     }
 
+    const renderTitle = () => {
+        switch(filter){ 
+            case 'all': return 'All tasks';
+            case 'personal': return '👤 Personal';
+            case 'work': return '👨‍⚖️ Work';
+            case 'household': return '🏡 Home';
+            case 'groceries': return '🥦 Groceries';
+            case 'movies': return '🍿 Movies to watch';
+            case 'gaming': return '🎮 Games to play';
+            case 'restaurants': return '🍟 Places to eat';
+            default: return 'Loading...';
+        }
+    }
+
     return (
         <>
-            <h1 className='content_title'> Bienvenido { window.localStorage.getItem('username') }! </h1>
+            <h1 className='content_title'> { renderTitle() } </h1>
             <ul className='content_todos-wrapper'>
                 {
                     renderTodos()

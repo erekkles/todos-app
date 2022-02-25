@@ -20,14 +20,14 @@ const Main = () => {
                             <Searchbar />
                             <Categories />
                         </div>
-                        <button onClick={() => logout()}>Cerrar sesión</button>
+                        <button className='wrapper_aside-outButton cursor-pointer' onClick={() => logout()}>Cerrar sesión</button>
                     </aside>
 
                     <main className='main_wrapper-content'>
                         {
                             <TodosList />
                         }
-                        <button onClick={() => window.location.href = '/create'}>Add new todo</button>
+                        <button className='wrapper_content-newButton cursor-pointer' onClick={() => window.location.href = '/create'}>Add new todo</button>
                     </main>
                 </div>
             </div>

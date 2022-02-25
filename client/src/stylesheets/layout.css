@@ -1,4 +1,5 @@
 .layout_container {
     height: 100vh;
     padding: 1em;
+    background-image: url('../assets/images/bg_image.jpg');
 }
